@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./prism.css">
+    <style>
+      #footer{
+        color:white;
+        max-height: 10rem;
+      }
+    </style>
+    <title>Welcome</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Postman Clone</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+    <div class="container my-3">
+        <!-- URL BOX -->
+        <div class="form-group row my-3 mx-auto">
+            <select id="requestType" class="form-control col-sm-1">
+                <option>GET</option>
+                <option>POST</option>
+            </select>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="url" placeholder="Enter URL here">
+            </div>
+        </div>
+        <!-- OPTION FOR JSON OR PARAMETERS -->
+        <fieldset class="form-group">
+            <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0">Input Format</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="inputType" id="json" value="JSON" checked>
+                        <label class="form-check-label" for="json">
+                            JSON
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="inputType" id="params" value="PARAMS">
+                        <label class="form-check-label" for="params">
+                            Custom Parameters
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <!-- DEFAULT JSON BOX- HIDE WHEN CUSTOM PARAMETERS RADIO IS SELECTED -->
+        <div id="inputJson">
+            <div class="form-group row">
+                <label for="labelJson" class="col-sm-2 col-form-label">JSON</label>
+                <div class="col-sm-8">
+                    <textarea type="text" class="form-control" id="jsonText"></textarea>
+                </div>
+            </div>
+        </div>
+        <!-- PARAMETERS BOX- HIDE WHEN JSON RADIO IS SELECTED -->
+        <div id="parametersBox">
+            <form>
+                <div class="row">
+                    <label for="labelJson" class="col-sm-2 col-form-label">Parameters</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="keyText" placeholder="Key">
+                    </div>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="valueText" placeholder="Value">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- SUBMIT BUTTON -->
+        <div class="my-3">
+            <button class="btn btn-primary" id="submit">Send</button>
+        </div>
+        <!-- RESPONSE BOX -->
+        <div class="row " id="responseBox">
+          <label for="labelJson" class="col-sm-2 col-form-label">Response</label>
+           <div class="col-sm-8">
+                <textarea type="text" class="form-control" id="response" rows="15">Your response will appear here</textarea>
+            </div>
+        
+        </div>
+    </div>
+    <footer class="text-center bg-dark" id="footer">Designed By Utsav Panchal -> panchalutsav274@gmail.com</footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./index.js"></script>
+    <script type="text/javascript" src="./prism.js"></script>
+</body>
+
+</html>
